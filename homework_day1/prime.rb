@@ -1,4 +1,4 @@
-# Question #4
+# Question #5
 # Create a Ruby program that finds how many 
 # prime numbers are between 1 and a number given by the user.
 
