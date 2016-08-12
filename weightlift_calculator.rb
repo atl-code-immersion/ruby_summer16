@@ -49,6 +49,8 @@ if p_w%10 != 0
 	p_w += 5
 end
 
+puts "For #{d_w} lbs you will need (on each side):"
+
 # now we can just focus on a single side, 
 # since each side will have equal amount
 # of plates on each side
