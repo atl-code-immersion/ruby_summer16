@@ -1,20 +1,12 @@
 def weight_check(lbs) 
 	# is the desired weight higher than weight of bar?
-	if lbs > 45
-		return true
-	else
-		return false
-	end
+	return (lbs > 45) ? true : false
 end
 
 def divisible_by_5(lbs)
 	# is the desired weight is divisible by 5
 	# (because our plates are in weights divisible by 5)
-	if lbs%5 == 0
-		return true
-	else
-		return false
-	end
+	return (lbs%5 == 0) ? true : false
 end
 
 def plate_check(num, each_side)
@@ -53,8 +45,7 @@ p_w = d_w - 45
 # to have an even amount of weight on each side
 # of bar, the plate weight must be divisible by 10
 if p_w%10 != 0
-	puts "That weight is not possible with our current setup"
-	puts "Let me bump it up 5 lbs to #{d_w + 5}"
+	puts "That weight is not possible with our current setup\nLet me bump it up 5 lbs to #{d_w + 5}"
 	p_w += 5
 end
 
@@ -82,39 +73,3 @@ each_side = plate_check(10, each_side)
 plate_check(5, each_side)
 # we didn't reset each_side because
 # at this point, it should equal zero
-
-
-#-----------------------------------------------------------#
-# Below is  the long way...does the same thing as right 
-# above, and I could probably just delete it, but I worked
-# so hard on it! *wipes away a tear*
-
-# if each_side / 45 >= 1
-# 	puts "#{each_side/45} plates of 45"
-# 	each_side = each_side - (45 * (each_side/45))
-# end
-
-# if each_side / 35 >= 1
-# 	puts "#{each_side/35} plates of 35 "
-# 	each_side = each_side - (35 * (each_side/35))
-# end
-
-# if each_side / 25 >= 1
-# 	puts "#{each_side/25} plates of 25 "
-# 	each_side = each_side - (25 * (each_side/25))
-# end
-
-# if each_side / 15 >= 1
-# 	puts "#{each_side/15} plates of 15 "
-# 	each_side = each_side - (15 * (each_side/15))
-# end
-
-# if each_side / 10 >= 1
-# 	print "#{each_side/10} plates of 10 "
-# 	each_side = each_side - (10 * (each_side/10))
-# end
-
-# if each_side / 5 >= 1
-# 	puts "#{each_side/5} plates of 5 "
-# 	each_side = each_side - (5 * (each_side/5))
-# end
